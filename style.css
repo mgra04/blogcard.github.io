@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --clr-primary: hsl(47, 88%, 63%);
+  --clr-neutral-bg: hsl(0, 0%, 100%);
+  --clr-neutral-h: hsl(0, 0%, 7%);
+  --clr-neutral-p: hsl(0, 0%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background: var(--clr-neutral-bg);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 2rem;
+  border: 1px solid var(--clr-neutral-h);
+  box-shadow: 0.8rem 0.8rem 0 0 var(--clr-neutral-h);
+  max-width: 38.4rem;
+  margin: 2rem;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.category {
+  background: var(--clr-primary);
+  color: var(--clr-neutral-h);
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.4rem;
+  /* This help me to decrese element width to it's content */
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+.published-date {
+  color: var(--clr-neutral-h);
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.title:link,
+.title:visited {
+  color: var(--clr-neutral-h);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 150%;
+  text-decoration: none;
+  transition: color 150ms ease-in;
+  cursor: pointer;
+}
+
+.title:hover,
+.title:active {
+  color: var(--clr-primary);
+}
+
+.description {
+  color: var(--clr-neutral-p);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.author-img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.author-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+@media (max-width: 27rem) {
+  .card {
+    max-width: 32.7em;
+  }
+
+  .category {
+    font-size: 1.2em;
+  }
+
+  .published-date {
+    font-size: 1.2em;
+  }
+
+  .title:link,
+  .title:visited {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1.4em;
+  }
+}
